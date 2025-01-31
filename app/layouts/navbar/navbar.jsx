@@ -1,5 +1,6 @@
 import { Icon } from '~/components/icon';
 import { Monogram } from '~/components/monogram';
+import { Image } from '~/components/image';
 import { useTheme } from '~/components/theme-provider';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
@@ -10,6 +11,9 @@ import { cssProps, media, msToNum, numToMs } from '~/utils/style';
 import { NavToggle } from './nav-toggle';
 import { ThemeToggle } from './theme-toggle';
 import { navLinks, socialLinks } from './nav-data';
+import logodaffaTexture from '~/assets/logo-daffa.png';
+import logodaffaTextureLarge from '~/assets/logo-daffa-large.png';
+import logodaffaTexturePlaceholder from '~/assets/logo-daffa-placeholder.png';
 import config from '~/config.json';
 import styles from './navbar.module.css';
 
@@ -142,7 +146,7 @@ export const Navbar = () => {
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink
-        unstable_viewTransition
+        unstable_viewTransition 
         prefetch="intent"
         to={location.pathname === '/' ? '/#intro' : '/'}
         data-navbar-item
@@ -150,7 +154,11 @@ export const Navbar = () => {
         aria-label={`${config.name}, ${config.role}`}
         onClick={handleMobileNavClick}
       >
-        <Monogram highlight />
+        <Image 
+        srcSet={`${logodaffaTexture} 480w, ${logodaffaTextureLarge} 960w`}
+        placeholder={logodaffaTexturePlaceholder}
+        style={{ width: 100, height: 100 }} 
+        />
       </RouterLink>
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
       <nav className={styles.nav}>

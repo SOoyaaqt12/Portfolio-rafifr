@@ -18,19 +18,16 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="Halo Semua" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      Nama Saya Rafif, saya tinggal di Bogor dan berstatus menjadi pelajar di{' '}
+      <Link href="https://smkpesat.sch.id/">SMK INFORMATIKA PESAT</Link>. proyek saya termasuk kedalam desain UI, prototyping UI, dan membuat fullstack website. saya sudah merasa nyaman dengan kode sehingga memungkinkan saya membuat prototipe dan memvalidasi pengalaman dengan cepat. Jika Anda tertarik dengan alat dan perangkat lunak yang saya gunakan, lihat halaman <Link href="/uses">penggunaan saya</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+    Di waktu luang saya suka berlatih Jiu Jitsu Brasil, bermain video game, dan{' '}
+      <Link href="https://open.spotify.com/user/31nvnaosj26bn4wvfw5tqtejsqve?si=89c1b1324d8b486b">dan mendengarkan lagu melalui spotify saya</Link>. Saya selalu siap untuk mendengar
+      tentang proyek baru, jadi jangan ragu untuk menghubungi saya.
     </Text>
   </Fragment>
 );
@@ -62,7 +59,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 href="/contact"
                 icon="send"
               >
-                Send me a message
+                Hubungi Saya Sekarang
               </Button>
             </div>
             <div className={styles.column}>
