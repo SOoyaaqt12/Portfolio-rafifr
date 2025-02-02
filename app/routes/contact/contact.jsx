@@ -20,9 +20,9 @@ import styles from './contact.module.css';
 
 export const meta = () => {
   return baseMeta({
-    title: 'Contact',
+    title: 'Kontak',
     description:
-      'Send me a message if you’re interested in discussing a project or if you just want to say hi',
+      'Kirimkan saya pesan jika Anda tertarik mendiskusikan suatu proyek atau jika Anda hanya ingin menyapa',
   });
 };
 
@@ -119,7 +119,7 @@ export const Contact = () => {
               as="h1"
               style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
             >
-              <DecoderText text="Say hello" start={status !== 'exited'} delay={300} />
+              <DecoderText text="Halo Semua" start={status !== 'exited'} delay={300} />
             </Heading>
             <Divider
               className={styles.divider}
@@ -139,7 +139,7 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay)}
               autoComplete="email"
-              label="Your email"
+              label="Email Kamu"
               type="email"
               name="email"
               maxLength={MAX_EMAIL_LENGTH}
@@ -152,7 +152,7 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationS, initDelay)}
               autoComplete="off"
-              label="Message"
+              label="Pesan"
               name="message"
               maxLength={MAX_MESSAGE_LENGTH}
               {...message}

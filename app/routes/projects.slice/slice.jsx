@@ -1,26 +1,26 @@
 import sliceAnnotationLarge from '~/assets/slice-annotation-large.png';
 import sliceAnnotationPlaceholder from '~/assets/slice-annotation-placeholder.png';
 import sliceAnnotation from '~/assets/slice-annotation.png';
-import sliceAppLarge from '~/assets/slice-app-large.jpg';
-import sliceAppPlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceApp from '~/assets/slice-app.jpg';
-import sliceBackgroundBarLarge from '~/assets/slice-background-bar-large.jpg';
-import sliceBackgroundBarPlaceholder from '~/assets/slice-background-bar-placeholder.jpg';
-import sliceBackgroundBar from '~/assets/slice-background-bar.jpg';
-import sliceBackgroundLarge from '~/assets/slice-background-large.jpg';
-import sliceBackgroundPlaceholder from '~/assets/slice-background-placeholder.jpg';
-import sliceBackground from '~/assets/slice-background.jpg';
+import sliceAppLarge from '~/assets/html-css-portfolio-large.jpeg';
+import sliceAppPlaceholder from '~/assets/html-css-portfolio-placeholder.jpeg';
+import sliceApp from '~/assets/html-css-portfolio.jpeg';
+import sliceBackgroundBarLarge from '~/assets/plan-large.jpeg';
+import sliceBackgroundBarPlaceholder from '~/assets/plan-placeholder.jpeg';
+import sliceBackgroundBar from '~/assets/plan.jpeg';
+import sliceBackgroundLarge from '~/assets/bg-portopage-large.jpeg';
+import sliceBackgroundPlaceholder from '~/assets/bg-portopage-placeholder.jpeg';
+import sliceBackground from '~/assets/bg-portopage.jpeg';
 import sliceIrlPlaceholder from '~/assets/slice-irl-placeholder.jpg';
 import sliceIrl from '~/assets/slice-irl.jpg';
-import sliceSidebarAnnotationsLarge from '~/assets/slice-sidebar-annotations-large.png';
-import sliceSidebarAnnotationsPlaceholder from '~/assets/slice-sidebar-annotations-placeholder.png';
-import sliceSidebarAnnotations from '~/assets/slice-sidebar-annotations.png';
-import sliceSidebarLayersLarge from '~/assets/slice-sidebar-layers-large.png';
-import sliceSidebarLayersPlaceholder from '~/assets/slice-sidebar-layers-placeholder.png';
-import sliceSidebarLayers from '~/assets/slice-sidebar-layers.png';
-import sliceSlidesLarge from '~/assets/slice-slides-large.jpg';
-import sliceSlidesPlaceholder from '~/assets/slice-slides-placeholder.jpg';
-import sliceSlides from '~/assets/slice-slides.jpg';
+import sliceSidebarAnnotationsLarge from '~/assets/portophone2-large.jpg';
+import sliceSidebarAnnotationsPlaceholder from '~/assets/portophone2-placeholder.jpg';
+import sliceSidebarAnnotations from '~/assets/portophone2.jpg';
+import sliceSidebarLayersLarge from '~/assets/phoneporto1-large.jpg';
+import sliceSidebarLayersPlaceholder from '~/assets/phoneporto1-placeholder.jpg';
+import sliceSidebarLayers from '~/assets/phoneporto1.jpg';
+import sliceSlidesLarge from '~/assets/portokontak-large.png';
+import sliceSlidesPlaceholder from '~/assets/portokontak-placeholder.png';
+import sliceSlides from '~/assets/portokontak.png';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import {
@@ -40,9 +40,9 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './slice.module.css';
 
-const title = 'Biomedical image collaboration';
+const title = 'Portofolio';
 const description =
-  'This project involved designing a better way for biomedical educators and learners to annotate digital slides together.';
+  'Proyek ini melibatkan perancangan cara yang lebih baik bagi saya untuk menunjukan hasil dari target kompetensi saya.';
 const roles = ['User Research', 'UX Design', 'Interface Design'];
 
 export const meta = () => {
@@ -64,7 +64,7 @@ export const Slice = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.best.edu.au/s/q2yjjvl7?data=8%404!9%4020303!10%40-15087&version=1"
+          url="https://portofolio-rafifr.vercel.app/"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -82,16 +82,12 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>Untuk Semua Device</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
+                Projek portofolio ini melibatkan perancangan cara yang lebih baik bagi saya untuk menampilkan visual yang responsif dan menarik bagi pengguna. Saya ingin menunjukkan hasil dari target kompetensi saya, dan memperlihatkan kemampuan saya dalam merancang dan mengembangkan aplikasi web yang dapat diakses oleh semua perangkat.
               </ProjectSectionText>
               <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+                Solusi saya adalah memungkinkan semua orang dapat melihat hasil yang saya telah saya kembangkan, dan mereka dapat menilai kemampuan saya.
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -119,14 +115,9 @@ export const Slice = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
+              <ProjectSectionHeading>Komunikasi</ProjectSectionHeading>
               <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
+                Untuk membuat sebuah proyek, saya tidak bisa mengerjakannya sendiri. Saya membutuhkan bantuan dari orang lain, dan saya harus berkomunikasi dengan mereka. Saya harus menjelaskan apa yang saya inginkan, dan apa yang saya butuhkan. Saya harus mendengarkan masukan mereka, dan saya harus menjelaskan apa yang saya lakukan, saya menyediakan halaman kontak untuk kolaborasi dan komunikasi bersama saya.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -165,13 +156,9 @@ export const Slice = () => {
               </div>
             </div>
             <div className={styles.gridText}>
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
+              <ProjectSectionHeading>Detail yang berarti</ProjectSectionHeading>
               <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
+                Tanggapan anda sangat berarti bagi saya, saya membutuhkan masukan dari anda untuk memperbaiki diri saya. Saya menyediakan fitur untuk memberikan tanggapan kepada saya, dan saya akan sangat berterima kasih jika anda memberikan tanggapan kepada saya.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -179,13 +166,11 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
+              <ProjectSectionHeading>
+                Hasil proyek
+              </ProjectSectionHeading>
               <ProjectSectionText>
-                Real-time collaborative annotation facilitated better collaboration
-                between learners, and was much easier to run group exercises with the new
-                shared layers feature. Learners gave feedback that is was enjoyable to
-                work together and see what others were doing, and liked how interactive
-                and easy to use the application was.
+                Anotasi kolaboratif real-time memfasilitasi kolaborasi yang lebih baik antar pelajar, dan lebih mudah menjalankan latihan kelompok dengan fitur lapisan bersama yang baru. Peserta didik memberikan umpan balik yang menyenangkan untuk bekerja sama dan melihat apa yang dilakukan orang lain, dan menyukai betapa interaktif dan mudahnya penggunaan aplikasi tersebut.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image

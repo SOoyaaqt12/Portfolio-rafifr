@@ -127,7 +127,7 @@ export const Home = () => {
         title="Jaki Clone Aplication with React Native and Tailwind CSS"
         description="Desain dan pembuatan aplikasi clone Jaki menggunakan React Native dan Tailwind CSS"
         buttonText="View Repo"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://github.com/SOoyaaqt12/expo-app-latest"
         model={{
           type: 'phone',
           alt: 'App login screen',

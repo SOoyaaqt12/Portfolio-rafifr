@@ -43,6 +43,24 @@ import imageSprStoryboarderDark from '~/assets/spr-storyboarder-dark.png';
 import imageSprStoryboarderLightLarge from '~/assets/spr-storyboarder-light-large.png';
 import imageSprStoryboarderLightPlaceholder from '~/assets/spr-storyboarder-light-placeholder.png';
 import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
+import loginlibraryTextureDark from '~/assets/logindark.png'
+import loginlibraryTextureLight from '~/assets/loginlight.png'
+import loginlibraryTextureDarkLarge from '~/assets/logindark-large.png'
+import loginlibraryTextureLightLarge from '~/assets/loginlight-large.png'
+import loginlibraryTextureDarkPlaceholder from '~/assets/logindark-placeholder.png'
+import loginlibraryTextureLightPlaceholder from '~/assets/loginlight-placeholder.png'
+import homelibraryTextureDark from '~/assets/homedark.png'
+import homelibraryTextureLight from '~/assets/homelight.png'
+import homelibraryTextureDarkLarge from '~/assets/homedark-large.png'
+import homelibraryTextureLightLarge from '~/assets/homelight-large.png'
+import homelibraryTextureDarkPlaceholder from '~/assets/homedark-placeholder.png'
+import homelibraryTextureLightPlaceholder from '~/assets/homelight-placeholder.png'
+import figmaTextureDark from '~/assets/figmadark.png';
+import figmaTextureLight from '~/assets/figmalight.png';
+import figmaTextureDarkLarge from '~/assets/figmadark-large.png';
+import figmaTextureLightLarge from '~/assets/figmalight-large.png';
+import figmaTextureDarkPlaceholder from '~/assets/figmadark-placeholder.png';
+import figmaTextureLightPlaceholder from '~/assets/figmalight-placeholder.png';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { Link } from '~/components/link';
@@ -70,9 +88,9 @@ const EarthSection = lazy(() =>
   import('./earth').then(module => ({ default: module.EarthSection }))
 );
 
-const title = 'Designing the future of education';
+const title = 'Merancang masa depan perpustakaan';
 const description =
-  'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning designers.';
+  'Saya berstatus sebagai pelajar di sekolah SMK PESAT. saya membawa platform ini ke arah baru yang berani, dengan fokus untuk menjadi alat terbaik perpustakaan dimulai dari perpustakaan sekolah saya.';
 const roles = [
   'Art Direction',
   'UX and UI Design',
@@ -105,7 +123,7 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.smartsparrow.com/"
+          url="https://perpus.smkpesat.sch.id/"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -115,15 +133,15 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
-                  : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
+                  ? `${loginlibraryTextureDark} 1280w, ${loginlibraryTextureDarkLarge} 2560w`
+                  : `${loginlibraryTextureLight} 1280w, ${loginlibraryTextureLightLarge} 2560w`
               }
               width={1280}
               height={800}
               placeholder={
                 isDark
-                  ? imageSprLessonBuilderDarkPlaceholder
-                  : imageSprLessonBuilderLightPlaceholder
+                  ? loginlibraryTextureDarkPlaceholder
+                  : loginlibraryTextureLightPlaceholder
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
@@ -132,15 +150,9 @@ export const SmartSparrow = () => {
         </ProjectSection>
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>Permasalahan</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              Pada tahun 2024, saya memulai proyek untuk membangun platform yang sepenuhnya baru yang berfungsi sebagai alat paling ampuh untuk perpustakaan sekolah yang bertujuan menciptakan pengalaman baru untuk seluruh warga sekolah pesat. Platform lama dibuat dengan HTML & TailwindCSS, dan ada sejumlah masalah pengalaman pengguna yang harus diselesaikan dalam proses pemindahan platform ke Javascript. Sasaran utama proyek ini adalah mengurangi hambatan dalam kolaborasi, dan membuat platform lebih mudah bagi pengguna baru, namun dengan banyak ruang untuk dikembangkan bagi pengguna tingkat lanjut.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -172,16 +184,6 @@ export const SmartSparrow = () => {
                 <SegmentedControlOption>Light theme</SegmentedControlOption>
               </SegmentedControl>
             </ProjectTextRow>
-            <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
-              <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
-              </ProjectSectionText>
-            </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
@@ -191,8 +193,8 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDarkLarge} 2560w`
-                  : `${imageSprDesignSystemLight} 1280w, ${imageSprDesignSystemLightLarge} 2560w`
+                  ? `${homelibraryTextureDark} 1280w, ${homelibraryTextureDarkLarge} 2560w`
+                  : `${homelibraryTextureLight} 1280w, ${homelibraryTextureLightLarge} 2560w`
               }
               width={1280}
               height={800}
@@ -205,12 +207,9 @@ export const SmartSparrow = () => {
               sizes="100vw"
             />
             <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
+              <ProjectSectionHeading>Dokumen Sistem Desain</ProjectSectionHeading>
               <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
+                Sistem desain tidak ada gunanya jika tidak ada yang tahu cara menggunakannya, jadi saya menggunakan situs web dokumentasi komprehensif yang mencakup prinsip, ux, aksesibilitas, dan pedoman komponen untuk desainer dan insinyur yang bekerja dengan sistem.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -234,10 +233,7 @@ export const SmartSparrow = () => {
                 <ProjectTextRow width="s">
                   <ProjectSectionHeading>Motion design</ProjectSectionHeading>
                   <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
+                    Animasi adalah prinsip inti dalam membuat pengalaman penulisan menjadi proses yang lebih mudah dipahami. Elemen dianimasikan dengan cara yang menunjukkan sebab dan akibat setiap interaksi untuk meningkatkan kelancaran pengalaman keseluruhan.
                   </ProjectSectionText>
                 </ProjectTextRow>
               </ProjectSectionContent>
@@ -257,13 +253,9 @@ export const SmartSparrow = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
+              <ProjectSectionHeading>Mendorong Adaptasi</ProjectSectionHeading>
               <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
+                Bagian utama dari penyelesaian kolaborasi adalah mampu memvisualisasikan pengalaman pelajar di editor. Hal ini sangat bermanfaat bagi para ahli materi pelajaran dan instruktur yang perlu meninjau dan memberikan umpan balik pada struktur tingkat yang lebih tinggi tanpa harus menggali seluruh skenario adaptasi layar demi layar.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -271,15 +263,15 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprStoryboarderDark} 1280w, ${imageSprStoryboarderDarkLarge} 2560w`
-                  : `${imageSprStoryboarderLight} 1280w, ${imageSprStoryboarderLightLarge} 2560w`
+                  ? `${figmaTextureDark} 1280w, ${figmaTextureDarkLarge} 2560w`
+                  : `${figmaTextureLight} 1280w, ${figmaTextureLightLarge} 2560w`
               }
               width={1280}
               height={800}
               placeholder={
                 isDark
-                  ? imageSprStoryboarderDarkPlaceholder
-                  : imageSprStoryboarderLightPlaceholder
+                  ? figmaTextureDarkPlaceholder
+                  : figmaTextureLightPlaceholder
               }
               alt="A drag and drop storyboard style editor for creating an adaptive lesson."
               sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
@@ -291,14 +283,10 @@ export const SmartSparrow = () => {
             <ProjectSectionContent>
               <ProjectTextRow>
                 <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
+                  Ekosistem plugin yang dapat diperluas dan dapat digunakan oleh semua orang
                 </ProjectSectionHeading>
                 <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
+                  Aspek yang paling kuat dari platform ini adalah kemampuan untuk membuat plugin khusus untuk konten apa pun, baik itu gelar, kursus, pelajaran, layar, atau komponen interaktif. Ini dapat dikonfigurasi dengan sedikit usaha dari pengembang. Desainer pembelajaran kemudian dapat mengedit semuanya menggunakan antarmuka konfigurasi umum.
                 </ProjectSectionText>
               </ProjectTextRow>
             </ProjectSectionContent>
@@ -414,12 +402,10 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent>
                     <ProjectTextRow center>
                       <ProjectSectionHeading>
-                        Next-generation learning experiences
+                        Pengalaman belajar generasi berikutnya
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        The flexibility of the product allowed for developers to create
-                        engaging interactive experiences as highly configurable plugins
-                        that could then be used and manipulated by learning designers.
+                        Fleksibilitas produk memungkinkan pengembang untuk berkreasi pengalaman interaktif yang menarik sebagai plugin yang sangat dapat dikonfigurasi yang kemudian dapat digunakan dan dimanipulasi oleh perancang pembelajaran.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -439,12 +425,10 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="end" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Bringing 3D into learning
+                        Membawa 3D ke dalam pembelajaran
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        One really cool example is the 3D screen plugin. Learning
-                        designers can load any model into it and then configure camera
-                        positions to animate to for each section.
+                        Salah satu contoh yang sangat keren adalah plugin layar 3D. Sedang belajar desainer dapat memuat model apa pun ke dalamnya dan kemudian mengonfigurasi kamera posisi untuk dianimasikan untuk setiap bagian.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -467,12 +451,10 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="start" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Interactivity
+                        Interaktivitas
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        Learners can then be directed to specific parts of the model and
-                        shown labels. They’re also able to click and drag to orbit around
-                        and freely explore at any time.
+                        Peserta didik kemudian dapat diarahkan ke bagian tertentu dari model dan label yang ditampilkan. Mereka juga dapat mengeklik dan menyeret untuk mengorbit dan bebas menjelajah kapan saja.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>
@@ -501,12 +483,10 @@ export const SmartSparrow = () => {
                   <ProjectSectionContent width="xl">
                     <ProjectTextRow justify="end" width="s">
                       <ProjectSectionHeading level={4} as="h3">
-                        Animation
+                        Animasi
                       </ProjectSectionHeading>
                       <ProjectSectionText>
-                        Learning designers can pick an animation included in the model to
-                        play or loop for any section without having to use any complex
-                        animation tools.
+                        Desainer pembelajaran dapat memilih animasi yang disertakan dalam model putar atau putar untuk bagian mana pun tanpa harus menggunakan kerumitan apa pun alat animasi.
                       </ProjectSectionText>
                     </ProjectTextRow>
                   </ProjectSectionContent>

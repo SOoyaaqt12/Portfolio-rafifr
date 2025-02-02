@@ -1,27 +1,27 @@
 ---
-title: You (probably) don't need CSS-in-JS
+title: Anda (mungkin) tidak membutuhkan CSS-in-JS
 abstract: Vanilla CSS is good now actually. Here's a couple nifty techniques for dynamically styling React components with CSS custom properties.
 date: '2022-05-01'
 banner: /static/modern-styling-in-react-banner.jpg
 featured: true
 ---
 
-When I first tried CSS-in-JS libraries like [Styled Components](https://styled-components.com/) and [Emotion](https://emotion.sh), the thing that felt right about it was passing values or state directly into the styles for a component. It really closed the loop with the concept of React where the UI is a function of state. While this was a definite advancement over the traditional way of styling React with classes and pre-processed CSS, it still had its problems.
+Ketika saya pertama kali mencoba pustaka CSS-in-JS seperti [Styled Components](https://styled-components.com/) dan [Emotion](https://emotion.sh), hal yang dirasa benar adalah meneruskan nilai atau status langsung ke gaya untuk sebuah komponen. Itu benar-benar menutup loop dengan konsep React di mana UI adalah fungsi negara. Meskipun ini merupakan kemajuan yang pasti dibandingkan cara tradisional menata gaya React dengan kelas dan CSS yang telah diproses sebelumnya, hal ini masih mempunyai masalah.
 
-To highlight some examples, I'll break down some typical examples using two main types of dynamic styles you'll run into with React components:
+Untuk menyoroti beberapa contoh, saya akan menguraikan beberapa contoh umum menggunakan dua tipe utama gaya dinamis yang akan Anda temui dengan komponen React:
 
-1. **Values:** like a color, delay, or position. Anything that represents a single value for a CSS property.
-1. **States:** like a primary button variant, or a loading state each having their own set of associated styles.
+1. **Values:** seperti warna, penundaan, atau posisi. Apa pun yang mewakili nilai tunggal untuk properti CSS.
+1. **States:** seperti varian tombol utama, atau status pemuatan, masing-masing memiliki serangkaian gaya terkaitnya sendiri.
 
-## Where we are today
+## Dimana kita saat ini
 
-Before we get started, for comparison I'll be using SCSS (with [BEM syntax](https://css-tricks.com/bem-101/)) and Styled Components in my examples for how styling is typically approached in React. I won't cover CSS-in-JS libraries that deal with writing CSS as JavaScript objects. I think there are already good solutions out there (I'd recommend [Vanilla Extract](https://vanilla-extract.style/)) if you prefer having type checking and living more fully on the JavaScript side of things. My solution is more for those of us that like writing CSS as CSS, but want to respond to the reactivity and state of components in a better way.
+Sebelum kita mulai, sebagai perbandingan, saya akan menggunakan SCSS (dengan [syntax BEM](https://css-tricks.com/bem-101/)) dan Komponen Bergaya dalam contoh saya tentang bagaimana gaya biasanya didekati di React. Saya tidak akan membahas perpustakaan CSS-in-JS yang berhubungan dengan penulisan CSS sebagai objek JavaScript. Saya pikir sudah ada solusi bagus di luar sana  (saya akan merekomendasikan [Vanilla Extract](https://vanilla-extract.style/)) jika Anda lebih suka melakukan pengecekan tipe dan hidup lebih sepenuhnya di sisi JavaScript. Solusi saya lebih ditujukan bagi kita yang suka menulis CSS sebagai CSS, namun ingin merespons reaktivitas dan status komponen dengan cara yang lebih baik.
 
-If you're already familiar with the problem, [skip to the solution](#theres-a-better-way-vanilla-css).
+Jika Anda sudah familiar dengan masalahnya, [kita bisa lanjut ke solusinya](#theres-a-better-way-vanilla-css).
 
 ### Values
 
-Using vanilla CSS, or pre-processed CSS by means of LESS or SCSS, the traditional way of passing a _value_ to your styles on was to just use inline styles. So if we have a button component that allows a color, it would look something like this:
+Menggunakan vanilla CSS, atau pre-processed CSS melalui LESS atau SCSS, cara tradisional untuk meneruskan a _value_ ke gaya Anda adalah dengan hanya menggunakan gaya sebaris. Jadi jika kita memiliki komponen tombol yang memungkinkan warna, maka akan terlihat seperti ini:
 
 ```jsx
 function Button({ color, children }) {
@@ -33,9 +33,9 @@ function Button({ color, children }) {
 }
 ```
 
-The problem with this approach is that it brings with it all the problems of inline styles. It now has higher specificity making it harder to override, and the styles aren't co-located with the rest of our button styles.
+Masalah dengan pendekatan ini adalah pendekatan ini membawa serta semua masalah gaya inline. Sekarang memiliki spesifisitas yang lebih tinggi sehingga lebih sulit untuk diganti, dan gayanya tidak ditempatkan bersama dengan gaya tombol lainnya.
 
-CSS-in-JS (in the case of Styled Components or Emotion) solved this problem by allowing dynamic values like this to be directly as props
+CSS-in-JS (dalam kasus Komponen Styled Components atau Emotion) memecahkan masalah ini dengan mengizinkan nilai dinamis seperti ini secara langsung sebagai props
 
 ```jsx
 // We can pass the `color` value into the styled component as a prop
