@@ -14,6 +14,9 @@ import { navLinks, socialLinks } from './nav-data';
 import logodaffaTexture from '~/assets/logo-daffa.png';
 import logodaffaTextureLarge from '~/assets/logo-daffa-large.png';
 import logodaffaTexturePlaceholder from '~/assets/logo-daffa-placeholder.png';
+import logodaffaTextureDark from '~/assets/logo-daffa-light.png';
+import logodaffaTextureDarkLarge from '~/assets/logo-daffa-light-large.png';
+import logodaffaTexturePlaceholderDark from '~/assets/logo-daffa-light-placeholder.png';
 import config from '~/config.json';
 import styles from './navbar.module.css';
 
@@ -155,7 +158,8 @@ export const Navbar = () => {
         onClick={handleMobileNavClick}
       >
         <Image 
-        srcSet={`${logodaffaTexture} 480w, ${logodaffaTextureLarge} 960w`}
+        invertOnDark
+        srcSet={`${theme === 'dark' ? logodaffaTexture : logodaffaTextureDark} 480w, ${theme === 'dark' ? logodaffaTextureLarge : logodaffaTextureDark} 960w`}
         placeholder={logodaffaTexturePlaceholder}
         style={{ width: 100, height: 100 }} 
         />

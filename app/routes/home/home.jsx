@@ -53,10 +53,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectfour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectfour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -159,6 +160,26 @@ export const Home = () => {
             {
               srcSet: `${portfoliohtmlTexture} 800w, ${portfoliohtmlTextureLarge} 1920w`,
               placeholder: portfoliohtmlTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        sectionRef={projectfour}
+        visible={visibleSections.includes(projectfour.current)}
+        index={4}
+        title="Library Management with Laravel and Tailwind CSS"
+        description="Desain Website menggunakan framework Laravel dan Tailwind CSS"
+        buttonText="View website"
+        buttonLink="https://portfolio-fadil.vercel.app/"
+        model={{
+          type: 'laptop',
+          alt: 'Smart Sparrow lesson builder',
+          textures: [
+            {
+              srcSet: `${laravelTexture} 1280w, ${laravelTextureLarge} 2560w`,
+              placeholder: laravelTexturePlacehoder,
             },
           ],
         }}
