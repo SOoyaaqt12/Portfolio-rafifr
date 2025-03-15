@@ -1,6 +1,9 @@
 import laravelTexturePlacehoder from '~/assets/laravel-web-placeholder.jpg';
 import laravelTextureLarge from '~/assets/laravel-web-large.jpg';
 import laravelTexture from '~/assets/laravel-web.jpg';
+import fadilTexture from '~/assets/fadil.png';
+import fadilTextureLarge from '~/assets/fadil-large.png';
+import fadilTexturePlaceholder from '~/assets/fadil-placeholder.png';
 import jakiTextureLarge from '~/assets/jaki-phone-large.png';
 import jakiTexturePlaceholder from '~/assets/jaki-phone-placeholder.png';
 import jakiTexture from '~/assets/jaki-phone.png';
@@ -169,17 +172,17 @@ export const Home = () => {
         sectionRef={projectfour}
         visible={visibleSections.includes(projectfour.current)}
         index={4}
-        title="Library Management with Laravel and Tailwind CSS"
-        description="Desain Website menggunakan framework Laravel dan Tailwind CSS"
+        title="Fadil's portfolio with React and Remix"
+        description="Desain Website menggunakan framework Remix dengan bahasa Typescript"
         buttonText="View website"
-        buttonLink="https://portfolio-fadil.vercel.app/"
+        buttonLink="https://portfolio-fadil.vercel.app"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${laravelTexture} 1280w, ${laravelTextureLarge} 2560w`,
-              placeholder: laravelTexturePlacehoder,
+              srcSet: `${fadilTexture} 1280w, ${fadilTextureLarge} 2560w`,
+              placeholder: fadilTexturePlaceholder,
             },
           ],
         }}
