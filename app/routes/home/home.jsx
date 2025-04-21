@@ -239,7 +239,7 @@ export const Home = () => {
       title="Techxperience"
       description="Membuat Aplikasi Belajar Menggunakan React Native dan juga Tailwind CSS"
       buttonText="Install Aplikasi"
-
+      buttonLink="https://github.com/SOoyaaqt12/Techxperience"
       model={{ 
         type: 'phone',
         alt: 'Aplikasi Techxperience'
