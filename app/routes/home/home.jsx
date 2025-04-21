@@ -13,6 +13,18 @@ import jakiProfile from '~/assets/jaki-profile.png';
 import portfoliohtmlTextureLarge from '~/assets/html-css-portfolio-large.jpeg';
 import portfoliohtmlTexturePlaceholder from '~/assets/html-css-portfolio-placeholder.jpeg';
 import portfoliohtmlTexture from '~/assets/html-css-portfolio.jpeg';
+import tugaskuhomeTexture from '~/assets/tugaskuHome.png';
+import tugaskuhomeTextureLarge from '~/assets/tugaskuHome-large.png';
+import tugaskuhomeTexturePlaceholder from '~/assets/tugaskuHome-placeholder.png';
+import tugaskuagendaTexture from '~/assets/tugaskuagenda.png';
+import tugaskuagendaTextureLarge from '~/assets/tugaskuagenda-large.png';
+import tugaskuagendaTexturePlaceholder from '~/assets/tugaskuagenda-placeholder.png';
+import techxperienceTexture from '~/assets/techxperience.png';
+import techxperienceTextureLarge from '~/assets/techxperience-large.png';
+import techxperienceTexturePlaceholder from '~/assets/techxperience-placeholder.png';
+import techxperiencehomeTexture from '~/assets/techxperiencehome.png';
+import techxperiencehomeTextureLarge from '~/assets/techxperiencehome-large.png';
+import techxperiencehomeTexturePlaceholder from '~/assets/techxperiencehome-placeholder.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -57,10 +69,12 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const projectfour = useRef();
+  const projectfive = useRef();
+  const projectsix = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectfour, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectfour, projectfive, projectsix, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -169,6 +183,7 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-4"
+        alternate
         sectionRef={projectfour}
         visible={visibleSections.includes(projectfour.current)}
         index={4}
@@ -184,9 +199,59 @@ export const Home = () => {
               srcSet: `${fadilTexture} 1280w, ${fadilTextureLarge} 2560w`,
               placeholder: fadilTexturePlaceholder,
             },
+            {
+              srcSet: `${techxperiencehomeTexture} 1280w, ${techxperiencehomeTextureLarge} 2560w`,
+              placeholder: techxperiencehomeTexturePlaceholder,
+            },
           ],
         }}
       />
+      <ProjectSummary
+      id="project-5"
+      sectionRef={projectfive}
+      visible={visibleSections.includes(projectfive.current)}
+      index={5}
+      title="TugasKu"
+      description="Desain dan pembuatan aplikasi agenda pelajaran menggunakan React Native dan Backend menggunakan PHP"
+      buttonText="Install Aplikasi"
+      buttonLink="https://expo.dev/accounts/daffarafdhan/projects/TugasKu/builds/dae0a98e-6255-465f-abee-b0c6b0ec6685"
+      model={{ 
+        type: 'phone',
+        alt: 'Aplikasi TugasKu'
+        , textures: [
+          {
+            srcSet: `${tugaskuhomeTexture} 375w, ${tugaskuhomeTextureLarge} 750w`,
+            placeholder: tugaskuhomeTexturePlaceholder,
+          },
+          {
+            srcSet: `${tugaskuagendaTexture} 375w, ${tugaskuagendaTextureLarge} 750w`,
+            placeholder: tugaskuagendaTexturePlaceholder,
+          },
+        ],
+      }}
+      />
+      <ProjectSummary
+      id="project-6"
+      alternate
+      sectionRef={projectsix}
+      visible={visibleSections.includes(projectsix.current)}
+      index={6}
+      title="Techxperience"
+      description="Membuat Aplikasi Belajar Menggunakan React Native dan juga Tailwind CSS"
+      buttonText="Install Aplikasi"
+
+      model={{ 
+        type: 'phone',
+        alt: 'Aplikasi Techxperience'
+        , textures: [
+          {
+            srcSet: `${techxperienceTexture} 375w, ${techxperienceTextureLarge} 750w`,
+            placeholder: techxperienceTexturePlaceholder,
+          },
+        ],
+       }}
+      />
+
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
