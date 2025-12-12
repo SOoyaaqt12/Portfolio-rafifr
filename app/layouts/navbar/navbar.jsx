@@ -149,7 +149,7 @@ export const Navbar = () => {
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink
-        unstable_viewTransition 
+        unstable_viewTransition
         prefetch="intent"
         to={location.pathname === '/' ? '/#intro' : '/'}
         data-navbar-item
@@ -157,11 +157,17 @@ export const Navbar = () => {
         aria-label={`${config.name}, ${config.role}`}
         onClick={handleMobileNavClick}
       >
-        <Image 
-        invertOnDark
-        srcSet={`${theme === 'dark' ? logodaffaTexture : logodaffaTextureDark} 480w, ${theme === 'dark' ? logodaffaTextureLarge : logodaffaTextureDark} 960w`}
-        placeholder={logodaffaTexturePlaceholder}
-        style={{ width: 100, height: 100 }} 
+        <Image
+          invertOnDark
+          srcSet={`${theme === 'dark' ? logodaffaTextureDark : logodaffaTexture} 480w, ${
+            theme === 'dark' ? logodaffaTextureDarkLarge : logodaffaTextureLarge
+          } 960w`}
+          placeholder={
+            theme === 'dark'
+              ? logodaffaTexturePlaceholderDark
+              : logodaffaTexturePlaceholder
+          }
+          style={{ width: 100, height: 100 }}
         />
       </RouterLink>
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />

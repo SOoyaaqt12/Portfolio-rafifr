@@ -74,7 +74,16 @@ export const Home = () => {
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectfour, projectfive, projectsix, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      projectfour,
+      projectfive,
+      projectsix,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -207,49 +216,49 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-      id="project-5"
-      sectionRef={projectfive}
-      visible={visibleSections.includes(projectfive.current)}
-      index={5}
-      title="TugasKu"
-      description="Desain dan pembuatan aplikasi agenda pelajaran menggunakan React Native dan Backend menggunakan PHP"
-      buttonText="Install Aplikasi"
-      buttonLink="https://expo.dev/accounts/daffarafdhan/projects/TugasKu/builds/dae0a98e-6255-465f-abee-b0c6b0ec6685"
-      model={{ 
-        type: 'phone',
-        alt: 'Aplikasi TugasKu'
-        , textures: [
-          {
-            srcSet: `${tugaskuhomeTexture} 375w, ${tugaskuhomeTextureLarge} 750w`,
-            placeholder: tugaskuhomeTexturePlaceholder,
-          },
-          {
-            srcSet: `${tugaskuagendaTexture} 375w, ${tugaskuagendaTextureLarge} 750w`,
-            placeholder: tugaskuagendaTexturePlaceholder,
-          },
-        ],
-      }}
+        id="project-5"
+        sectionRef={projectfive}
+        visible={visibleSections.includes(projectfive.current)}
+        index={5}
+        title="TugasKu"
+        description="Desain dan pembuatan aplikasi agenda pelajaran menggunakan React Native dan Backend menggunakan PHP"
+        buttonText="Install Aplikasi"
+        buttonLink="https://expo.dev/accounts/daffarafdhan/projects/TugasKu/builds/dae0a98e-6255-465f-abee-b0c6b0ec6685"
+        model={{
+          type: 'phone',
+          alt: 'Aplikasi TugasKu',
+          textures: [
+            {
+              srcSet: `${tugaskuhomeTexture} 375w, ${tugaskuhomeTextureLarge} 750w`,
+              placeholder: tugaskuhomeTexturePlaceholder,
+            },
+            {
+              srcSet: `${tugaskuagendaTexture} 375w, ${tugaskuagendaTextureLarge} 750w`,
+              placeholder: tugaskuagendaTexturePlaceholder,
+            },
+          ],
+        }}
       />
       <ProjectSummary
-      id="project-6"
-      alternate
-      sectionRef={projectsix}
-      visible={visibleSections.includes(projectsix.current)}
-      index={6}
-      title="Techxperience"
-      description="Membuat Aplikasi Belajar Menggunakan React Native dan juga Tailwind CSS"
-      buttonText="Install Aplikasi"
-      buttonLink="https://github.com/SOoyaaqt12/Techxperience"
-      model={{ 
-        type: 'phone',
-        alt: 'Aplikasi Techxperience'
-        , textures: [
-          {
-            srcSet: `${techxperienceTexture} 375w, ${techxperienceTextureLarge} 750w`,
-            placeholder: techxperienceTexturePlaceholder,
-          },
-        ],
-       }}
+        id="project-6"
+        alternate
+        sectionRef={projectsix}
+        visible={visibleSections.includes(projectsix.current)}
+        index={6}
+        title="Techxperience"
+        description="Membuat Aplikasi Belajar Menggunakan React Native dan juga Tailwind CSS"
+        buttonText="Install Aplikasi"
+        buttonLink="https://github.com/SOoyaaqt12/Techxperience"
+        model={{
+          type: 'phone',
+          alt: 'Aplikasi Techxperience',
+          textures: [
+            {
+              srcSet: `${techxperienceTexture} 375w, ${techxperienceTextureLarge} 750w`,
+              placeholder: techxperienceTexturePlaceholder,
+            },
+          ],
+        }}
       />
 
       <Profile
